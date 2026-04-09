@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Vihanga Nimsara — Physics & Electronics undergraduate at University of Kelaniya. Portfolio of projects, research and ideas at the frontier of science and technology.">
+  <title>Vihanga Nimsara · Physicist · Electronics · IT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cursor glow -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Noise overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#home">VN<span class="dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"    class="nav-link">Home</a></li>
+        <li><a href="#about"   class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills"  class="nav-link">Skills</a></li>
+        <li><a href="#blog"    class="nav-link">Blog</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#home"    class="mob-link">Home</a></li>
+      <li><a href="#about"   class="mob-link">About</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#skills"  class="mob-link">Skills</a></li>
+      <li><a href="#blog"    class="mob-link">Blog</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- ══════════════════ HERO ══════════════════ -->
+    <section id="home" class="hero">
+      <canvas id="particleCanvas"></canvas>
+      <div class="hero-grid-lines"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge reveal">
+          <span class="badge-pulse"></span>
+          <span class="mono">BSc Physics &amp; Electronics · Final Year</span>
+        </div>
+
+        <h1 class="hero-title reveal delay-1">
+          <span class="title-line">Vihanga</span>
+          <span class="title-line accent-line">Nimsara</span>
+        </h1>
+
+        <div class="typed-row reveal delay-2">
+          <span class="typed-prefix mono">→ </span>
+          <span id="typedText" class="typed-text mono"></span>
+          <span class="typed-cursor mono">▋</span>
+        </div>
+
+        <p class="hero-desc reveal delay-3">
+          Bridging the beauty of fundamental physics, the precision of electronics engineering, 
+          and the creative power of software — building systems that matter.
+        </p>
+
+        <div class="hero-cta reveal delay-4">
+          <a href="#projects" class="btn-primary">
+            <i class="fas fa-microchip"></i> View My Work
+          </a>
+          <a href="#contact" class="btn-ghost">
+            <i class="fas fa-paper-plane"></i> Get in Touch
+          </a>
+        </div>
+
+        <div class="hero-socials reveal delay-5">
+          <a href="#" aria-label="GitHub"   class="social-pill"><i class="fab fa-github"></i><span>GitHub</span></a>
+          <a href="#" aria-label="LinkedIn" class="social-pill"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+          <a href="#" aria-label="Email"    class="social-pill"><i class="fas fa-envelope"></i><span>Email</span></a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
+        <div class="orbit-ring ring-3"></div>
+        <div class="atom-center"><i class="fas fa-atom"></i></div>
+        <div class="orbit-dot dot-1"></div>
+        <div class="orbit-dot dot-2"></div>
+        <div class="orbit-dot dot-3"></div>
+      </div>
+
+      <a href="#about" class="scroll-down" aria-label="Scroll down">
+        <span class="mono scroll-label">scroll</span>
+        <div class="scroll-line"></div>
+      </a>
+    </section>
+
+    <!-- ══════════════════ ABOUT ══════════════════ -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-label mono">01 — About</div>
+        <h2 class="section-title">The <span class="accent">Story</span> Behind the Science</h2>
+
+        <div class="about-layout">
+          <div class="about-left">
+            <div class="avatar-frame">
+              <div class="avatar-inner">
+                <i class="fas fa-user-astronaut avatar-icon"></i>
+              </div>
+              <div class="avatar-ring"></div>
+              <div class="avatar-corner tl"></div>
+              <div class="avatar-corner tr"></div>
+              <div class="avatar-corner bl"></div>
+              <div class="avatar-corner br"></div>
+            </div>
+
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-num accent">4+</span>
+                <span class="stat-label">Years of Study</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-num accent">12+</span>
+                <span class="stat-label">Projects Built</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-num accent">3</span>
+                <span class="stat-label">Research Areas</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-right">
+            <div class="about-cards">
+              <div class="about-card reveal-card">
+                <div class="card-icon"><i class="fas fa-university"></i></div>
+                <h3>Academic Journey</h3>
+                <p>Final-year undergraduate at <strong>University of Kelaniya</strong>, Faculty of Science — BSc in Physics and Electronics. Deep engagement in quantum mechanics, semiconductor physics, embedded systems and computational modeling.</p>
+              </div>
+              <div class="about-card reveal-card">
+                <div class="card-icon"><i class="fas fa-flask"></i></div>
+                <h3>What Drives Me</h3>
+                <p>I thrive at the intersection of theoretical physics, hands-on electronics, and software. Building hardware-software interfaces, sensor networks and physics simulations keeps my curiosity burning.</p>
+              </div>
+              <div class="about-card reveal-card">
+                <div class="card-icon"><i class="fas fa-microscope"></i></div>
+                <h3>Research & Vision</h3>
+                <p>Exploring IoT-enabled physics labs, low-cost instrumentation and ML for signal analysis. My goal: technology that democratizes scientific exploration in emerging research contexts.</p>
+              </div>
+            </div>
+
+            <div class="about-detail-block reveal-card">
+              <p>🔬 <strong>Currently working on:</strong> Final year research — <em>"Wireless Sensor Network for Real-time Monitoring of Physics Laboratory Parameters"</em> using ESP32, LoRa, and Python analytics.</p>
+              <p>🎓 <strong>Core coursework:</strong> Electromagnetic Theory, Digital & Analog Electronics, Quantum Mechanics, Embedded C, Signal Processing, Python for Scientists.</p>
+              <p>💡 <strong>Fun fact:</strong> I once built a mini theremin with Arduino and realised that Maxwell's equations sound great when turned into music.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ PROJECTS ══════════════════ -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-label mono">02 — Projects</div>
+        <h2 class="section-title">Featured <span class="accent">Work</span></h2>
+        <p class="section-sub">Physics · Electronics · Full-stack fusion</p>
+
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="electronics">Electronics</button>
+          <button class="filter-btn" data-filter="physics">Physics</button>
+          <button class="filter-btn" data-filter="software">Software</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <div class="project-card" data-category="electronics software">
+            <div class="project-header">
+              <div class="project-number mono">01</div>
+              <div class="project-tags">
+                <span class="tag">IoT</span><span class="tag">Embedded</span>
+              </div>
+            </div>
+            <div class="project-icon-wrap"><i class="fas fa-thermometer-half"></i></div>
+            <h3>Smart Environmental Monitor</h3>
+            <p>IoT-based climate monitoring using ESP8266, DHT22, MQTT & Node-RED. Real-time dashboard with threshold alerts — deployed in university physics lab for continuous data logging.</p>
+            <div class="tech-stack">
+              <span class="tech">C++</span><span class="tech">MQTT</span><span class="tech">Node-RED</span><span class="tech">Arduino</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a>
+              <a href="#" class="proj-link accent-link"><i class="fas fa-arrow-up-right-from-square"></i> Demo</a>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="electronics">
+            <div class="project-header">
+              <div class="project-number mono">02</div>
+              <div class="project-tags">
+                <span class="tag">Analog</span><span class="tag">Design</span>
+              </div>
+            </div>
+            <div class="project-icon-wrap"><i class="fas fa-wave-square"></i></div>
+            <h3>Analog Filter Design Suite</h3>
+            <p>Designed and simulated active low-pass & high-pass filters (Sallen-Key topology) in LTspice. Validated on breadboard using signal generator and oscilloscope for frequency response analysis.</p>
+            <div class="tech-stack">
+              <span class="tech">LTspice</span><span class="tech">Op-Amps</span><span class="tech">Oscilloscope</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-link"><i class="fab fa-github"></i> Docs</a>
+              <a href="#" class="proj-link"><i class="fas fa-file-alt"></i> Report</a>
+            </div>
+          </div>
+
+          <div class="project-card featured-card" data-category="physics software">
+            <div class="project-header">
+              <div class="project-number mono">03</div>
+              <div class="project-tags">
+                <span class="tag featured-tag">⭐ Featured</span>
+              </div>
+            </div>
+            <div class="project-icon-wrap"><i class="fas fa-atom"></i></div>
+            <h3>Double Slit Simulator</h3>
+            <p>Interactive Python simulation of wave-particle duality (Fraunhofer diffraction). Visualises intensity patterns with adjustable slit width and wavelength — educational tool for undergraduate physics students.</p>
+            <div class="tech-stack">
+              <span class="tech">Python</span><span class="tech">Matplotlib</span><span class="tech">NumPy</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-link accent-link"><i class="fab fa-github"></i> Explore</a>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="electronics physics">
+            <div class="project-header">
+              <div class="project-number mono">04</div>
+              <div class="project-tags">
+                <span class="tag">Optical</span><span class="tag">Comms</span>
+              </div>
+            </div>
+            <div class="project-icon-wrap"><i class="fas fa-laser"></i></div>
+            <h3>Laser Audio Transmitter</h3>
+            <p>Arduino Nano + laser module + photodiode — transmitting analog audio wirelessly via light. Explored free-space optical communication principles and implemented a working audio receiver circuit.</p>
+            <div class="tech-stack">
+              <span class="tech">Embedded C</span><span class="tech">Op-Amp</span><span class="tech">Prototyping</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-link"><i class="fab fa-github"></i> Hardware</a>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="software physics">
+            <div class="project-header">
+              <div class="project-number mono">05</div>
+              <div class="project-tags">
+                <span class="tag">ML</span><span class="tag">Signal</span>
+              </div>
+            </div>
+            <div class="project-icon-wrap"><i class="fas fa-brain"></i></div>
+            <h3>Signal Anomaly Detector</h3>
+            <p>Machine learning pipeline for detecting anomalies in oscilloscope waveforms. Uses scikit-learn isolation forest model trained on physics experiment data to flag irregular signal patterns.</p>
+            <div class="tech-stack">
+              <span class="tech">Python</span><span class="tech">scikit-learn</span><span class="tech">Pandas</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="electronics software">
+            <div class="project-header">
+              <div class="project-number mono">06</div>
+              <div class="project-tags">
+                <span class="tag">LoRa</span><span class="tag">Research</span>
+              </div>
+            </div>
+            <div class="project-icon-wrap"><i class="fas fa-satellite-dish"></i></div>
+            <h3>Wireless Lab Sensor Network</h3>
+            <p>Final year research project — WSN for real-time monitoring of physics lab parameters using ESP32 + LoRa modules. Python analytics backend with live dashboard for faculty use.</p>
+            <div class="tech-stack">
+              <span class="tech">ESP32</span><span class="tech">LoRa</span><span class="tech">Python</span><span class="tech">Firebase</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-link accent-link"><i class="fab fa-github"></i> Research</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ SKILLS ══════════════════ -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <div class="section-label mono">03 — Skills</div>
+        <h2 class="section-title">Technical <span class="accent">Arsenal</span></h2>
+
+        <div class="skills-layout">
+
+          <div class="skill-block">
+            <div class="skill-block-header">
+              <i class="fas fa-atom"></i>
+              <span>Physics &amp; Modeling</span>
+            </div>
+            <div class="skill-tags">
+              <span>Quantum Mechanics</span>
+              <span>Electrodynamics</span>
+              <span>Mathematical Modeling</span>
+              <span>Data Analysis (SciPy)</span>
+              <span>Computational Physics</span>
+              <span>Statistical Mechanics</span>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <div class="skill-block-header">
+              <i class="fas fa-microchip"></i>
+              <span>Electronics &amp; Embedded</span>
+            </div>
+            <div class="skill-tags">
+              <span>Arduino / ESP32</span>
+              <span>PCB Design (EasyEDA)</span>
+              <span>Embedded C/C++</span>
+              <span>Oscilloscopes &amp; DMMs</span>
+              <span>Sensor Interfacing</span>
+              <span>LTspice</span>
+              <span>LoRa / MQTT</span>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <div class="skill-block-header">
+              <i class="fas fa-code"></i>
+              <span>IT &amp; Development</span>
+            </div>
+            <div class="skill-tags">
+              <span>Python / NumPy</span>
+              <span>JavaScript (ES6+)</span>
+              <span>React Basics</span>
+              <span>HTML5 / CSS3</span>
+              <span>Git &amp; GitHub</span>
+              <span>SQL / Firebase</span>
+              <span>REST APIs</span>
+            </div>
+          </div>
+
+          <div class="skill-block">
+            <div class="skill-block-header">
+              <i class="fas fa-tools"></i>
+              <span>Tools &amp; Platforms</span>
+            </div>
+            <div class="skill-tags">
+              <span>Linux / Bash</span>
+              <span>MATLAB</span>
+              <span>Jupyter Notebook</span>
+              <span>VS Code</span>
+              <span>Docker (Basics)</span>
+              <span>Node-RED</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Proficiency bars -->
+        <div class="proficiency">
+          <h3 class="prof-title">Core Proficiency</h3>
+          <div class="prof-bars">
+            <div class="prof-bar">
+              <div class="prof-info">
+                <span>Embedded C / Arduino</span>
+                <span class="mono accent">90%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill" data-w="90"></div></div>
+            </div>
+            <div class="prof-bar">
+              <div class="prof-info">
+                <span>Python (Scientific)</span>
+                <span class="mono accent">85%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill" data-w="85"></div></div>
+            </div>
+            <div class="prof-bar">
+              <div class="prof-info">
+                <span>Electronics Design</span>
+                <span class="mono accent">80%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill" data-w="80"></div></div>
+            </div>
+            <div class="prof-bar">
+              <div class="prof-info">
+                <span>Web Development</span>
+                <span class="mono accent">70%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill" data-w="70"></div></div>
+            </div>
+            <div class="prof-bar">
+              <div class="prof-info">
+                <span>Machine Learning</span>
+                <span class="mono accent">60%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill" data-w="60"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════ BLOG ══════════════════ -->
+    <section id="blog" class="section blog">
+      <div class="container">
+        <div class="section-label mono">04 — Blog</div>
+        <h2 class="section-title">Thoughts &amp; <span class="accent">Learnings</span></h2>
+        <p class="section-sub">Physics insights, electronics experiments, and code notes</p>
+
+        <div class="blog-grid">
+
+          <article class="blog-card featured-blog">
+            <div class="blog-meta">
+              <span class="blog-date mono">Mar 2025</span>
+              <span class="blog-cat">Physics</span>
+            </div>
+            <h3>Why the Double Slit Experiment Still Blows My Mind</h3>
+            <p>After three years of quantum mechanics, I still find wave-particle duality to be the most philosophically disturbing result in science. Here's why, and what I learned building a simulation of it.</p>
+            <a href="#" class="blog-read">Read article <i class="fas fa-arrow-right"></i></a>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-meta">
+              <span class="blog-date mono">Feb 2025</span>
+              <span class="blog-cat">Electronics</span>
+            </div>
+            <h3>LoRa vs Wi-Fi for Campus Sensor Networks: A Practical Comparison</h3>
+            <p>Real-world tradeoffs from building our wireless lab monitoring system. Range, power, and latency lessons I wish someone had told me first.</p>
+            <a href="#" class="blog-read">Read article <i class="fas fa-arrow-right"></i></a>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-meta">
+              <span class="blog-date mono">Jan 2025</span>
+              <span class="blog-cat">Software</span>
+            </div>
+            <h3>NumPy Broadcasting: The Trick That Sped Up My Simulations 10×</h3>
+            <p>When I replaced my nested Python loops with vectorised NumPy operations, the runtime dropped from 45 seconds to under 4. A deep dive into what's happening under the hood.</p>
+            <a href="#" class="blog-read">Read article <i class="fas fa-arrow-right"></i></a>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-meta">
+              <span class="blog-date mono">Dec 2024</span>
+              <span class="blog-cat">Electronics</span>
+            </div>
+            <h3>Building a Theremin with Arduino: When Maxwell's Equations Make Music</h3>
+            <p>Capacitive sensing, proximity detection, and turning fundamental EM principles into a playable instrument. Complete schematic and code walkthrough.</p>
+            <a href="#" class="blog-read">Read article <i class="fas fa-arrow-right"></i></a>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-meta">
+              <span class="blog-date mono">Nov 2024</span>
+              <span class="blog-cat">Research</span>
+            </div>
+            <h3>Low-Cost Instrumentation for University Labs: Is Open-Source the Answer?</h3>
+            <p>Exploring how open-source hardware platforms like OpenScope and Firmata can replace expensive lab instruments for educational purposes in resource-constrained universities.</p>
+            <a href="#" class="blog-read">Read article <i class="fas fa-arrow-right"></i></a>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-meta">
+              <span class="blog-date mono">Oct 2024</span>
+              <span class="blog-cat">Physics</span>
+            </div>
+            <h3>Understanding Sallen-Key Filters: From Transfer Functions to Hardware</h3>
+            <p>A step-by-step walkthrough of designing second-order active filters — from deriving the transfer function on paper to seeing it work on an oscilloscope.</p>
+            <a href="#" class="blog-read">Read article <i class="fas fa-arrow-right"></i></a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ CONTACT ══════════════════ -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-label mono">05 — Contact</div>
+        <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
+        <p class="section-sub">Have a project, research collaboration, or just want to talk physics? I'm all ears.</p>
+
+        <div class="contact-layout">
+          <div class="contact-left">
+            <div class="contact-info-cards">
+              <div class="contact-info-card">
+                <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <h4>Location</h4>
+                  <p>University of Kelaniya, Faculty of Science, Sri Lanka</p>
+                </div>
+              </div>
+              <div class="contact-info-card">
+                <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <h4>Email</h4>
+                  <p>nipun.ds@science.kln.ac.lk</p>
+                </div>
+              </div>
+              <div class="contact-info-card">
+                <div class="ci-icon"><i class="fab fa-github"></i></div>
+                <div>
+                  <h4>GitHub</h4>
+                  <p>github.com/vihanga-nimsara</p>
+                </div>
+              </div>
+              <div class="contact-info-card">
+                <div class="ci-icon"><i class="fab fa-linkedin-in"></i></div>
+                <div>
+                  <h4>LinkedIn</h4>
+                  <p>linkedin.com/in/vihanga-nimsara</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="availability-badge">
+              <span class="avail-dot"></span>
+              <span>Open to research collaborations &amp; internships</span>
+            </div>
+          </div>
+
+          <div class="contact-right">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="input-wrap">
+                  <label for="cName" class="mono">Name</label>
+                  <input type="text" id="cName" name="name" placeholder="Your name" required>
+                </div>
+                <div class="input-wrap">
+                  <label for="cEmail" class="mono">Email</label>
+                  <input type="email" id="cEmail" name="email" placeholder="your@email.com" required>
+                </div>
+              </div>
+              <div class="input-wrap">
+                <label for="cSubject" class="mono">Subject</label>
+                <input type="text" id="cSubject" name="subject" placeholder="Research collaboration / Project idea / Say hi">
+              </div>
+              <div class="input-wrap">
+                <label for="cMessage" class="mono">Message</label>
+                <textarea id="cMessage" name="message" rows="5" placeholder="Tell me about your idea..." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary submit-btn">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+              <div class="form-feedback" id="formFeedback"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════ FOOTER ══════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">VN<span class="dot">.</span></div>
+        <p>Vihanga Nimsara · Physics &amp; Electronics · University of Kelaniya</p>
+        <p class="mono footer-sub">Building bridges between fundamental science and real-world technology.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <span class="mono">© 2025 Vihanga Nimsara. Crafted with <i class="fas fa-heart" style="color:#f43f5e"></i> for physics &amp; electronics.</span>
+        <a href="#home" class="back-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+   (function(){
+      // Initialize with your actual Public Key
+      emailjs.init("RNRua0_oYO0mxt1aD");
+   })();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
